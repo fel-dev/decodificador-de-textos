@@ -1,0 +1,27 @@
+/* CSS header */
+/*  CSS main */
+@media screen and (max-width: 480px) {
+    body, section, botoes {
+        width: auto;
+        text-align: center;
+        margin: 30px;
+        position: static;
+        
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+
+    footer>p>a {
+        display: block;
+        margin: 5px;
+        padding: 5px;
+    }    
+
+   .social {
+        padding: 40px;
+    }
+/* css section-entrada */
+/* css section-saida */
+/* CSS footer */
