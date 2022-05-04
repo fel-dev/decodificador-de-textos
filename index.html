@@ -10,29 +10,25 @@
     <link rel="stylesheet" href="css/responsividade.css">
 </head>
 <body>
-    <header><img src="assets/logo.png" alt=""></header>
+    <header>
+        <img src="imagens/logo.png" alt="logo da Alura" class="logo">    
+    </header>
 
-    <main>
-        <section class="caixa" id="section-entrada">
+    <main class="main">
 
-            <textarea class="text-area" id="textarea-entrada" placeholder="Digite seu texto" autofocus></textarea>
-            
-            <div class="div-botoes">
-                
-                <button class="botao" id="bt_code">Code</button>
-                <button class="botao" id="bt_decode">Decode</button>
-
+        <section>
+            <textarea class="input-texto" id="" cols="40" rows="6" placeholder="Digite seu texto" autofocus></textarea>
+            <div class="informacao">
+                <img src="imagens/aviso.png">                
+                <h6>Apenas letras manúsculas e minúsculas</h6>  
+            </div>            
+            <div class="botoes">
+                <button class="encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
             </div>
-
-        </section><section class="caixa" id="section-saida">
-
-            <textarea class="text-area" id="textarea-resultado" placeholder='Utilize o campo "Digite seu texto"''></textarea>
-
-            <div class="div-botoes">
-
-                <button class="botao" id="bt_copy">Copy</button><button class="botao" id="bt_reset">Reset</button>
-
-            </div>
+        </section>
+        <section>
+            <textarea class="mensagem" cols="18" rows="8"></textarea>
         </section>
     </main>
 
@@ -43,6 +39,7 @@
         </div>
     </footer>
     <div>
+        
         <h1>----------- TESTES -----------</h1>
         <button id="bt_teste_encod"> Encode</button>
         <button id="bt_teste_decod"> Decode</button>
