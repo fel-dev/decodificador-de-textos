@@ -3,3 +3,63 @@
 /* css section-entrada */
 /* css section-saida */
 /* CSS footer */
+
+
+* {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F5FC;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+
+.input-texto, .input-texto::placeholder {
+    all: unset;
+    margin-top: 90px;
+    color: darkblue;
+    
+}
+
+.mensagem {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 90px;
+    background-image: url(imagens/resultado.png);
+    background-repeat: no-repeat;
+}
+
+informacao {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.encriptar {
+    background-color: darkblue;
+    color: white;
+}
+
+.desencriptar {
+    margin-left: 30px;
+}
+
+.informacao {
+    font-size: 150px;
+}
