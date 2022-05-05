@@ -1,77 +1,65 @@
 //Javascript Replace(): conheça esse método e aprenda como usar! https://blog.betrybe.com/javascript/javascript-replace/
 
-// Campos de textos
-var txt = document.querySelector('#texto-entrada');
-var res = document.querySelector('#texto-saida');
+const inputTexto = document.querySelector(".input-texto")
+const mensagem = document.querySelector(".mensagem")
 
-// Botões
-var bt_code = document.querySelector('#bt_code')
-var bt_decode = document.querySelector('#bt_decode')
-var bt_copiar = document.querySelector('#bt_copy');
-var bt_reset = document.querySelector('#bt_reset')
-
-// "Chaves" da criptografia
-var chave = ['e','i','a','o','u'];
-var saida = ['enter', 'imes', 'ai', 'ober', 'ufat'];
-
-//Funções
-function encode(texto) {
-    var encoded = texto
-        .replace(/a/gi, 'ai')
-        .replace(/e/gi, 'enter')
-        .replace(/i/gi, 'imes')
-        .replace(/o/gi, 'ober')
-        .replace(/u/gi, 'ufat');
-   
-
-    return encoded
+function btnEncriptar() {
+    const textoEncriptado = encriptar(inputTexto.value)
+    mensagem.value = textoEncriptado
+    mensagem.style.backgroundImage="none"
 }
-function enc() {
-    res.value = encode(txt.value)
+
+function encriptar(stringEncriptada) {
+    let matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++) {
+        if (stringEncriptada.includes(matrizCodigo[i][0])) {
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+        }
+    }
+    return stringEncriptada;
+}
+
+function btnDesencriptar () {
+    const textoEncriptado = desencriptar(inputTexto.value)
+    mensagem.value = textoEncriptado
+    mensagem.style.backgroundImage="none"
 }
 
 
-function decode(texto) {
-    var decoded = texto
+function desencriptar(stringEncriptada) {
+    let matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase()
 
-    .replace(/imes/gi, 'i')
-    .replace(/ai/gi, 'a')
-    .replace(/enter/gi, 'e')
-    
-    .replace(/ober/gi, 'o')
-    .replace(/ufat/gi, 'u');    
-
-    return decoded
-}
-function dec() {
-    res.value = decode(txt.value)
+    for(let i = 0; i < matrizCodigo.length; i++) {
+        if (stringEncriptada.includes(matrizCodigo[i][0])) {
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
+        }
+    }
+    return stringEncriptada;
 }
 
-function reset () {
-    res.value = ''
-    txt.value = ''
-}
-
-function copiarTexto() {
-    navigator.clipboard.writeText(res.value);
-    res.value = 'Copiado! "' + res.value + '".';
-}
-
-// Lincando ações aos respectivos botões
-bt_code.addEventListener('click', enc)
-bt_decode.addEventListener('click', dec)
-bt_copiar.addEventListener('click', copiarTexto)
-bt_reset.addEventListener('click', reset)
-
-
-
-   /////// Miscelineos \\\\\
-    // Submit com enter  \\
-txt.onkeydown = function (e) {
-    if (e.keyCode == 13) {
-        enc(txt.value)
+function btnCopiar() {
+    if (mensagem.value == '') {
+        mensagem.placeholder = 'Nenhuma mensagem encontrada'
+    } else {
+        navigator.clipboard.writeText(mensagem.value);
+        mensagem.value = ''
+        mensagem.placeholder = 'Mensagem copiada com sucesso!'
     }
 }
+
+
+/////// Miscelineos \\\\\
+// Submit com enter  \\
+inputTexto.onkeydown = function (e) {
+    if (e.keyCode == 13) {
+        btnEncriptar()
+    }
+}
+
+
 
     //////////////////////////////////////////
     ///////////// T E S T E S ////////////////
