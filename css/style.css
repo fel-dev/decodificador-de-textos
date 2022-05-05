@@ -6,12 +6,19 @@
     box-sizing: border-box;
 }
 
+header {
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
 body {
+    width: 80%;
     background-color: #F3F5FC;
     margin: auto;
 }
 
 main {
+    
     display: flex;
     margin-left: 80px;
     margin-bottom: 50px;
@@ -25,16 +32,39 @@ main {
 }
 
 .mensagem {
+    all: unset;
+    resize: none;
     position: relative;
     margin-top: 20px;
-    margin-left: 90px;
-    background-image: url(imagens/resultado.png);
+    margin-left: 45px;
+    margin-right: 45px;
+    background-image: url("/imagens/resultado.png");
     background-repeat: no-repeat;
+    text-align: center;
+}
+
+main>section:last-child {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+    text-align: center;
+    width: 25rem;
+}
+
+main>section:last-child>h6 {
+    font-size: 30px;
+}
+main>section:last-child>p {
+    font-size: 20px;
+}
+
+.informacao {
+    font-size: 150px;
 }
 
 div.informacao>h6 {
     display: inline;
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: auto;
 
 }
@@ -45,6 +75,26 @@ div.informacao>h6 {
     margin: 20px;
 }
 
+button {
+    border-radius: 15vw;
+}
+button:active {
+    font-weight: bold;
+    text-shadow: 1px 1px yellow;
+    color: green;
+    
+    font-size: 31px;
+    width: -100px;
+
+}
+
+button:hover {
+    box-shadow: 1px 1px 1px 1px green;
+    font-weight: bold;
+    border: 1px solid yellow;
+}
+
+
 .encriptar {
     background-color: darkblue;
     color: white;
@@ -52,8 +102,21 @@ div.informacao>h6 {
 
 .desencriptar {
     margin-left: 30px;
+    color: darkblue;
 }
 
-.informacao {
-    font-size: 150px;
+.copiar {
+    width: 100%;
+}
+
+
+
+a:hover {
+    box-shadow: 1px 1px 1px 1px green;
+    border-radius: 50%;
+}
+
+footer {
+    display: block;
+    text-align: center;
 }
