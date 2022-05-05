@@ -19,7 +19,7 @@
     <main class="main">
 
         <section>
-            <textarea class="input-texto" id="" cols="40" rows="6" placeholder="Digite seu texto" autofocus></textarea>
+            <textarea class="input-texto" id="" cols="40" rows="6" placeholder="Digite seu texto" required autofocus></textarea>
             <div class="informacao">
                 <img src="imagens/aviso.png">                
                 <h6>Apenas letras manúsculas e minúsculas</h6>  
@@ -30,8 +30,15 @@
             </div>
         </section>
         <section>
-            <textarea class="mensagem" cols="18" rows="8"></textarea>
-            <div class="botoes">
+            <textarea class="mensagem" cols="18" rows="10"readonly></textarea>
+            <h6 id="h6"></h6>  
+            <p id="p"></p>
+            <div class="instrucoes">                              
+
+            </div> 
+
+            <div class="botoes" >
+
                 <button class="copiar" onclick="btnCopiar()">Copiar</button>
             </div>
         </section>
