@@ -8,7 +8,7 @@
 
 header {
     margin-top: 5vh;
-    margin-left: 5vw;
+    margin-left: 1vw;
 }
 
 body {
@@ -49,6 +49,8 @@ main>section:last-child {
     box-shadow: 1px 1px 3px 1px lightgrey;
     text-align: center;
     width: 25rem;
+    margin-top: -40px;
+    margin-bottom: 0px;
 }
 
 main>section:last-child>h6 {
@@ -77,21 +79,17 @@ div.informacao>h6 {
 
 button {
     border-radius: 15vw;
+    width: 17vw;
 }
 button:active {
-    font-weight: bold;
-    text-shadow: 1px 1px yellow;
-    color: green;
-    
-    font-size: 31px;
-    width: -100px;
-
+    color: lime;
+    font-weight: bold;     
+    text-shadow:0 0 60px green;
 }
 
 button:hover {
-    box-shadow: 1px 1px 1px 1px green;
-    font-weight: bold;
-    border: 1px solid yellow;
+    border: 1px solid green;
+    box-shadow: 1px 1px 1px goldenrod;
 }
 
 
@@ -109,10 +107,8 @@ button:hover {
     width: 100%;
 }
 
-
-
 a:hover {
-    box-shadow: 1px 1px 1px 1px green;
+    box-shadow: 1px 1px 1px 1px darkblue;
     border-radius: 50%;
 }
 
