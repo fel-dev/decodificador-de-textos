@@ -62,7 +62,7 @@ function desencriptar(stringEncriptada) {
 function btnCopiar() {
     if (mensagem.value == '') {
         mensagem.placeholder = 'Nenhuma mensagem encontrada'
-        inputTexto.placeholder = 'Informe uma frase'
+        inputTexto.placeholder = 'Digite um texto que você deseja criptografar ou descriptografar'
         mensagem.style.backgroundImage="none"
     }  else {
         navigator.clipboard.writeText(mensagem.value);
