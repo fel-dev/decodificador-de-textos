@@ -1,8 +1,8 @@
 const inputTexto = document.querySelector(".input-texto")
 const mensagem = document.querySelector(".mensagem")
 
-const h6 = document.querySelector("#h6")
-const p = document.querySelector("#p")
+// Inoperante
+// const instrucoes = document.querySelector(".instrucoes")
 
 const matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
 
@@ -47,12 +47,13 @@ function btnDesencriptar () {
     }
 }
 
-
 function desencriptar(stringEncriptada) {
     stringEncriptada = stringEncriptada.toLowerCase()
 
     for(let i = 0; i < matrizCodigo.length; i++) {
+
         if (stringEncriptada.includes(matrizCodigo[i][0])) {
+            
             stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
         }
     }
@@ -60,31 +61,45 @@ function desencriptar(stringEncriptada) {
 }
 
 function btnCopiar() {
+
     if (mensagem.value == '') {
+
         mensagem.placeholder = 'Nenhuma mensagem encontrada'
         inputTexto.placeholder = 'Digite um texto que você deseja criptografar ou descriptografar'
         mensagem.style.backgroundImage="none"
+
     }  else {
+
         navigator.clipboard.writeText(mensagem.value);
         mensagem.value = ''
         mensagem.placeholder = 'Mensagem copiada com sucesso!'
-        inputTexto.placeholder = 'Digite seu texto'
-        
+        inputTexto.placeholder = 'Digite seu texto'        
     }
 }
 
+bt_colar = document.querySelector(".copiar")
 function btnColar() {    
+    if (inputTexto.value.placeholder == 'Digite seu texto') {
+        bt_colar = window.addEventListener("click", mudaParaVermelho())
+
+    } else {
         navigator.clipboard.writeText(inputTexto.value);
-        mensagem.value = ''
-        mensagem.placeholder = 'Mensagem copiada com sucesso!'    
+        mensagem.value = ''.blur
+        mensagem.placeholder = 'Mensagem copiada com sucesso!'
+        limpar()
+    }
 }
 
 function resetMensagem () {
     mensagem.style.backgroundImage='url("/imagens/resultado.png")'
     mensagem.placeholder = ''
-    h6.value = 'título aqui h6'
-    p.value = 'parágrafo da mesnagem aqui'
+    // dica1.di = 'Nenhuma mensagem encontrada'
+    // dica2.value = 'Digite um texto que você deseja criptografar ou descriptografar.'
 }
+
+function limpar () {
+     instrucoes.style.display = "none";
+ }
 
 
 /////// Miscelineos \\\\\
@@ -93,5 +108,12 @@ inputTexto.onkeydown = function (e) {
     if (e.keyCode == 13) {
         btnEncriptar()
     }
+}
+
+////////// trocar a cor dos botoes
+
+function mudaParaVermelho(item) {
+    item.style.color = red;
+    item.style.textShadow = "0 0 60px red";
 }
 
