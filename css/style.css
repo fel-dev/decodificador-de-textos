@@ -17,8 +17,7 @@ body {
     margin: auto;
 }
 
-main {
-    
+main {    
     display: flex;
     margin-left: 80px;
     margin-bottom: 50px;
@@ -31,6 +30,7 @@ main {
     
 }
 
+/* CSS da caixa de resultado */
 .mensagem {
     all: unset;
     resize: none;
@@ -55,6 +55,7 @@ main>section:last-child {
 
 main>section:last-child>h6 {
     font-size: 30px;
+    
 }
 main>section:last-child>p {
     font-size: 20px;
@@ -71,6 +72,7 @@ div.informacao>h6 {
 
 }
 
+/* CSS dos botoes */
 .botoes {
     display: flex;
     flex-direction: row;
@@ -96,11 +98,13 @@ button:hover {
 .encriptar {
     background-color: darkblue;
     color: white;
+    width: auto
 }
 
 .desencriptar {
     margin-left: 30px;
     color: darkblue;
+    width: auto;
 }
 
 .copiar {
@@ -112,6 +116,7 @@ a:hover {
     border-radius: 50%;
 }
 
+/* CSS do rodapé */
 footer {
     display: block;
     text-align: center;
