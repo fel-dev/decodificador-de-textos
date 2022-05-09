@@ -124,10 +124,8 @@ function btnColar() {
     // Restaura o campo do resultado (mensagem) //
     //////////////////////////////////////////////
 function resetMensagem () {
-    mensagem.style.backgroundImage='url("/imagens/resultado.png")'
+    mensagem.style.backgroundImage='url("../imagens/resultado.png")'
     mensagem.placeholder = ''
-    // dica1.di = 'Nenhuma mensagem encontrada'
-    // dica2.value = 'Digite um texto que você deseja criptografar ou descriptografar.'
 }
 
 function limpar () {
