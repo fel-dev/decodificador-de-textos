@@ -1,5 +1,5 @@
 ////////////////////////////////////
-// Capturando os elementos do HTML //
+// Capurando os elementos do HTML //
 ////////////////////////////////////
 const inputTexto = document.querySelector(".input-texto")
 const mensagem = document.querySelector(".mensagem")
@@ -140,6 +140,7 @@ function limpar () {
     ////////////////////////////////////
     // Verificar caracteres especiais //
     ////////////////////////////////////
+    // NOTA: Não deu tempo de consertar o bug que deixa colar caracteres especias no textarea
 function checar_carater(e) {
     const carater = String.fromCharCode(e.keyCode)
     const carater_aceitaveis = '[a-z,A-Z,0-9]'
