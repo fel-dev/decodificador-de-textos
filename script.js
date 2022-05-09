@@ -1,5 +1,5 @@
 ////////////////////////////////////
-// Capurando os elementos do HTML //
+// Capturando os elementos do HTML //
 ////////////////////////////////////
 const inputTexto = document.querySelector(".input-texto")
 const mensagem = document.querySelector(".mensagem")
