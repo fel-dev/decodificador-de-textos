@@ -124,7 +124,7 @@ function btnColar() {
     // Restaura o campo do resultado (mensagem) //
     //////////////////////////////////////////////
 function resetMensagem () {
-    mensagem.style.backgroundImage='url("../imagens/resultado.png")'
+    mensagem.style.backgroundImage='url("./imagens/resultado.png")'
     mensagem.placeholder = ''
 }
 
