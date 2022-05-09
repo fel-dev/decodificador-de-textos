@@ -38,7 +38,7 @@ main {
     margin-top: 20px;
     margin-left: 45px;
     margin-right: 45px;
-    background-image: url("/imagens/resultado.png");
+    background-image: url("resultado.png");
     background-repeat: no-repeat;
     text-align: center;
 }
