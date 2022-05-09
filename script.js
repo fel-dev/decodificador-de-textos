@@ -4,7 +4,7 @@ const mensagem = document.querySelector(".mensagem")
 // Inoperante
 // const instrucoes = document.querySelector(".instrucoes")
 
-const matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+const matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
 function btnEncriptar() {
     const textoEncriptado = encriptar(inputTexto.value)
