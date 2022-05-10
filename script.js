@@ -124,9 +124,9 @@ function btnColar() {
     // Restaura o campo do resultado (mensagem) //
     //////////////////////////////////////////////
 function resetMensagem () {
-//     mensagem.style.backgroundImage = "./resultado.png"
+    mensagem.style.backgroundImage = "url('./resultado.png')"
 //     imagens/resultado.png
-    mensagem.style.backgroundImage = "https://github.com/FelipeeCarneiro/decodificador-de-textos/blob/2537d58da1560861979ffda5f4787f7dc7f9eaf3/imagens/resultado.png"
+//     mensagem.style.backgroundImage = "https://github.com/FelipeeCarneiro/decodificador-de-textos/blob/2537d58da1560861979ffda5f4787f7dc7f9eaf3/imagens/resultado.png"
     mensagem.placeholder = ''
 }
 
